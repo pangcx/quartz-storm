@@ -12,8 +12,8 @@ Example:
     DefaultQuartzConfig conf = new DefaultQuartzConfig();
     conf.setDebug(true);
     //增加定时任务
-    conf.addJob(new DefaultQuartzJob("quartz.sms-olympics-country", "0/10 * * * * ?"));
-    conf.addJob(new DefaultQuartzJob("quartz.sms-olympics-city", "1/3 * * * * ?"));
+    conf.addJob(new DefaultQuartzJob("sms-olympics-country", "0/10 * * * * ?"));
+    conf.addJob(new DefaultQuartzJob("sms-olympics-city", "1/3 * * * * ?"));
     
     if (args != null && args.length > 0) {
         conf.setNumWorkers(3);
