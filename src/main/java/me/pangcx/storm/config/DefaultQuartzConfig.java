@@ -19,7 +19,7 @@ public class DefaultQuartzConfig extends Config {
      * @param expression
      */
     public void addJob(String jobName, String expression) {
-        put("lesports.quartz." + jobName, expression);
+        put("quartz." + jobName, expression);
     }
 
     /**
@@ -27,7 +27,7 @@ public class DefaultQuartzConfig extends Config {
      * @param quartzJob
      */
     public void addJob(QuartzJob quartzJob) {
-        put("lesports.quartz." + quartzJob.getJobName(), quartzJob.getExpression());
+        put("quartz." + quartzJob.getJobName(), quartzJob.getExpression());
     }
 
     /**

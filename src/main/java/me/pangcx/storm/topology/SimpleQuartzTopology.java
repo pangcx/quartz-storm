@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * lesports-projects
+ * quartz-projects
  *
  * @author pangchuanxiao
  * @since 16-2-14

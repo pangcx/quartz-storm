@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 
 /**
- * lesports-projects
+ * quartz-projects
  *
  * @author pangchuanxiao
  * @since 16-3-4
@@ -62,10 +62,10 @@ public class QuartzJobLoader {
     private static Map<String, String> getJobs(Map<String, String> conf) {
         Map<String, String> jobMap = Maps.newHashMap();
         for (String line : conf.keySet()) {
-            if (!line.startsWith("lesports.quartz.")) {
+            if (!line.startsWith("quartz.")) {
                 continue;
             }
-            String jobName = line.replace("lesports.quartz.", "");
+            String jobName = line.replace("quartz.", "");
             String jobExp = conf.get(line);
             if (StringUtils.isNotEmpty(jobName) && StringUtils.isNotEmpty(jobExp)) {
                 jobMap.put(jobName, jobExp);

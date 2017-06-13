@@ -10,11 +10,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.Map;
 
 /**
- * lesports-projects
+ * quartz-projects
  *
  * @author pangchuanxiao
  * @since 16-2-17
@@ -42,7 +43,7 @@ public class QuartzSpout extends BaseRichSpout {
                 LOG.warn("quartz job name is empty, will not emit this job. please check the config.");
                 return;
             }
-            String messageId = jobName + "_" + LeDateUtils.formatYYYYMMDDHHMMSS(new Date());
+            String messageId = jobName + "_" + DateFormat.getTimeInstance(DateFormat.FULL).format(new Date());
             collector.emit(new Values(jobName), messageId);
         } catch (Exception e) {
             LOG.error("{}", e.getMessage(), e);
