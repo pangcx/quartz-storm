@@ -1,0 +1,7 @@
+##ignore this file##
+/target
+/.settings
+/.classpath
+/.project
+/target
+*.iml
